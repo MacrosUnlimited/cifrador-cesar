@@ -73,11 +73,11 @@ ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ
 	
 ## 📁 Estructura del proyecto
 
-cifrador-cesar/
-├── index.html          # Estructura principal
-├── styles.css          # Estilos y diseño responsive
-├── script.js           # Lógica de cifrado e interactividad
-└── README.md           # Documentación del proyecto
++ cifrador-cesar/
++ ├── index.html          # Estructura principal
++ ├── styles.css          # Estilos y diseño responsive
++ ├── script.js           # Lógica de cifrado e interactividad
++ └── README.md           # Documentación del proyecto
 
 ## 🎨 Personalización
 Puedes modificar los colores y estilos en el archivo styles.css editando las variables CSS en :root:
