@@ -2,6 +2,9 @@
 
 Herramienta web interactiva para cifrar y descifrar textos mediante el cifrado César, con soporte completo para el alfabeto español.
 
+<img width="1280" height="896" alt="image" src="https://github.com/user-attachments/assets/3a79aa48-0f42-4b6d-887d-07cf4cee5b1f" />
+
+
 ## ✨ Características
 
 - **Alfabeto español completo** – Incluye Ñ y vocales acentuadas (á, é, í, ó, ú)
