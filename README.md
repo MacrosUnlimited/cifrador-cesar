@@ -98,6 +98,7 @@ Las contribuciones son bienvenidas. Si tienes sugerencias o mejoras:
 
 - Realiza tus cambios y haz commit (git commit -m 'Añadir nueva funcionalidad')
 
-- Sube tus cambios (git push origin feature/nueva-funcionalidad)
+## 📊 Diagrama de Flujo
 
-- Abre un Pull Request
+<img width="5167" height="8826" alt="Diagrama de flujo - Upgrade" src="https://github.com/user-attachments/assets/0eb62992-cab2-468d-a28c-a8b9a545053d" />
+
