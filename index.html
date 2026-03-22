@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cifrador y Descifrador César</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Cifrador y Descifrador César</h1>
+
+  <!-- ── Opción global ─────────────────────────── -->
+  <label class="global-options">
+    <input type="checkbox" id="keepPunctuation" checked>
+    Mantener espacios y signos de puntuación
+  </label>
+
+  <!-- ── Paneles ────────────────────────────────── -->
+  <div class="flex-container">
+
+    <!-- CIFRADOR -->
+    <div class="container">
+      <h2>🔒 Cifrador</h2>
+
+      <div class="input-group">
+        <label for="encryptInput">Texto original</label>
+        <textarea
+          id="encryptInput"
+          placeholder="Escribe aquí para cifrar…"
+          spellcheck="false"
+        ></textarea>
+      </div>
+
+      <div class="input-group">
+        <label for="encryptShift">Desplazamiento</label>
+        <div class="slider-row">
+          <input
+            type="range"
+            id="encryptShift"
+            min="1" max="31" value="3"
+            oninput="syncSlider(this)"
+          >
+          <span class="shift-badge" id="encryptShiftValue">3</span>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="encryptOutput">Texto cifrado</label>
+        <div class="output-row">
+          <textarea
+            id="encryptOutput"
+            placeholder="El resultado aparecerá aquí…"
+            readonly
+          ></textarea>
+          <button class="btn-copy" id="copyEncrypt" title="Copiar texto cifrado">Copiar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCIFRADOR -->
+    <div class="container">
+      <h2>🔓 Descifrador</h2>
+
+      <div class="input-group">
+        <label for="decryptInput">Texto cifrado</label>
+        <textarea
+          id="decryptInput"
+          placeholder="Pega aquí el texto cifrado…"
+          spellcheck="false"
+        ></textarea>
+      </div>
+
+      <div class="input-group">
+        <label for="decryptShift">Desplazamiento</label>
+        <div class="slider-row">
+          <input
+            type="range"
+            id="decryptShift"
+            min="1" max="31" value="3"
+            oninput="syncSlider(this)"
+          >
+          <span class="shift-badge" id="decryptShiftValue">3</span>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="decryptOutput">Texto descifrado</label>
+        <div class="output-row">
+          <textarea
+            id="decryptOutput"
+            placeholder="El resultado aparecerá aquí…"
+            readonly
+          ></textarea>
+          <button class="btn-copy" id="copyDecrypt" title="Copiar texto descifrado">Copiar</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.flex-container -->
+
+  <script>
+    /**
+     * Actualiza la variable CSS --pct del slider para animar el fill
+     * (el valor real lo lee script.js; esto es solo visual).
+     */
+    function syncSlider(el) {
+      const pct = ((el.value - el.min) / (el.max - el.min)) * 100;
+      el.style.setProperty('--pct', pct);
+    }
+
+    // Inicializar fill visual al cargar
+    document.querySelectorAll('input[type="range"]').forEach(syncSlider);
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
